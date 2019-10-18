@@ -29,8 +29,6 @@ class Paginator {
 
         this._currentPageNumber = this._lastpageNumber;
         return this._data.slice((this.pages() * this._itemsPerPage) - this._itemsPerPage, this.pages() * this._itemsPerPage);
-
-        // return this._data.slice(this._data.length - this._itemsPerPage, this._data.length);
     }
 
     firstPage() {
@@ -68,8 +66,3 @@ class Paginator {
         return this._currentPageNumber;
     }
 }
-
-let p = new Paginator();
-p.itemsPerPage = 4
-p.data = [1, 2, 4, 5, 6, 7, 4, 5, 9, 5, 6, 7, 8, 9, 4, 2, 2, 3, 3, 4, 45, 6, 67, 8, 87]
-p.page(3);
